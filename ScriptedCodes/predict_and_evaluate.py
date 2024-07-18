@@ -147,7 +147,7 @@ def main():
             pred_np = sitk.GetArrayFromImage(pred_img)
             spacing = np.array(list(reversed(pred_img.GetSpacing())))
 
-            print(f"Processing {vol_name} ...")
+            print(f"Processing {vol_name} for metrics computation ...")
 
             # Calculate metrics
             metrics = sg.write_metrics(
