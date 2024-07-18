@@ -194,7 +194,7 @@ For those who prefer running scripts from the shell, follow these steps to train
      ./run_prediction_and_evaluation.sh 
      ```
    - Upon successful execution, the `results` directory will be populated with the original segmentation files, predicted segmentation files, and the original CTA volumes for all folds.
-   - Concurrently, a comprehensive CSV file detailing the evaluation metrics will be generated. This file includes the **Dice coefficient** and **Hausdorff distance**.
+   - Concurrently, a comprehensive CSV file detailing the evaluation metrics will be generated. This file includes the **Dice Coefficient** and **Mean Surface Distance**.
 
 ---
 
@@ -218,7 +218,7 @@ For those who prefer Jupyter notebooks, navigate to the `InteractiveCodes` direc
 
 2. **Prediction and Evaluation:**  <a id="jupyter_prediction"></a>
    - Open `2_Prediction_and_Evaluation.ipynb` and run it. This notebook will guide you through the steps for prediction and generating evaluation metrics.
-   - This process will generate 3D segmentation files in the `results` directory. Additionally, a CSV file will be generated containing the **Dice coefficient** and **Hausdorff distance**.
+   - This process will generate 3D segmentation files in the `results` directory. Additionally, a CSV file will be generated containing the **Dice coefficient** and **Mean Surface Distance**.
 
 Feel free to experiment and improve upon our results.
 
