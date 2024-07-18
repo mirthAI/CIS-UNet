@@ -170,9 +170,12 @@ For those who prefer running scripts from the shell, follow these steps to train
       
    This will create two folders, `png_data` and `processed_png_data`, inside the `data` directory. The images inside `processed_png_data` will be used to train the networks; you may delete the `png_images` directory if desired.
 
-6. **Train the Image Registration Network:**
-   - Confirm that your current working directory is `ScriptedCodes`.
-   - To initiate the training process for both the affine and deformable registration networks across six folds, execute the following commands:
+6. **Train the CIS_UNet Network:** <a id="shell_training"></a>
+   - Confirm that your current working directory is `ScriptedCodes`. If not, navigate to the directory where the script is saved:
+     ```bash
+     cd ScriptedCodes
+     ```
+   - To initiate the training process for all four folds, execute the following commands:
         ```bash
         chmod +x ./run_training.sh
         ./run_training.sh
@@ -180,15 +183,44 @@ For those who prefer running scripts from the shell, follow these steps to train
    - The script will automatically create a `saved_model` folder within the `ScriptedCodes` directory.
    - The training process will proceed, and the model achieving the lowest loss will be stored in the `saved_model` directory.
    
-7. **Prediction and Evaluation:**
+7. **Prediction and Evaluation:**<a id="shell_prediction"></a> After training, use the saved checkpoints to generate predictions on the test set and evaluate the model. 
    - Verify that you are located within the `ScriptedCodes` directory.
    - Execute the following commands to commence the prediction and evaluation process:
 
      ```bash
-     chmod +x ./run_prediction_and_evaluation.sh
-     ./run_prediction_and_evaluation.sh
+     chmod +x ./run_prediction_and_evaluation.sh 
+     ./run_prediction_and_evaluation.sh 
      ```
-   - Upon successful execution, the results directory will be populated with the deformed registered images.
-   - Concurrently, a comprehensive CSV file detailing the evaluation metrics will be generated. This file includes the **Dice coefficient**, **Hausdorff distance**, **Urethra distance**, and distances for **Landmark 1**, **Landmark 2**, and **Landmark 3**, along with the **average landmark distance**.
+   - Upon successful execution, the `results` directory will be populated with the original segmentation files, predicted segmentation files, and the original CTA volumes for all folds.
+   - Concurrently, a comprehensive CSV file detailing the evaluation metrics will be generated. This file includes the **Dice coefficient** and **Hausdorff distance**.
 
 ---
+
+<div align="center">
+  <a id="interactive_code"></a>
+  <h1>Interactive Code</h1>
+</div>
+
+For those who prefer Jupyter notebooks, navigate to the `InteractiveCodes` directory, where you will find three notebooks:
+
+1. **1_Preparing_the_Data.ipynb**
+2. **2_Train_Registration_Networks.ipynb**
+3. **3_Performance_Evaluation.ipynb**
+
+### Steps:
+
+1. **Prepare the Dataset:** 
+   - Open `1_Preparing_the_Data.ipynb` and run it. This self-explanatory notebook will guide you through all the steps to prepare the dataset. 
+   - This process will create two folders, `png_data` and `processed_png_data`, inside the `data` directory. The images inside `processed_png_data` will be used to train the networks; you may delete the `png_images` directory if desired.
+
+2. **Train Image Registration Network:** 
+   - Open `2_Train_Registration_Networks.ipynb` and run it. This notebook will walk you through the process of training both affine and deformable registration networks.
+
+3. **Prediction and Evaluation:** 
+   - Open `3_Performance_Evaluation.ipynb` and run it. This notebook will guide you through the steps for prediction and generating evaluation metrics.
+   - This process will generate the deformed registered images in the `results` directory. Additionally, a CSV file will be generated containing the Dice coefficient, Hausdorff distance, Urethra distance, distances for Landmark 1, 2, and 3, as well as the average landmark distance.
+
+Feel free to experiment and improve upon our results.
+
+---
+
