@@ -29,9 +29,12 @@ Welcome to the repository containing the code and dataset for **CIS-UNet**, a de
 2. [Directory Structure](#directory-structure)
 3. [Dataset Detail](#dataset-detail)
 4. [Scripted Code](#scripted)
-5. [Interactive Code](#interactive)
-6. [Dependencies](#dependencies)
-7. [Citations](#citations)
+    1. [Training From The Shell](#shell_training)
+    2. [Prediction and Evaluation From the Shell](#shell_prediction)
+6. [Interactive Code](#interactive)
+7. [Dependencies](#dependencies)
+8. [Citations](#citations)
+
 
 
 ## Overview <a id="overview"></a>
@@ -125,6 +128,67 @@ To access the dataset, please participate in the **[AortaSeg24 Challenge](https:
 
 **Currently, the dataset is only accessible to participants. Once the challenge is over, it will be made accessible to the general audience.**
 
-
 </div>
 
+---
+
+
+<div align=center> <h1> 
+  <a id="scripted_code"></a>
+  Scipted Code
+</h1></div>
+
+For those who prefer running scripts from the shell, follow these steps to train the model:
+
+<h3> Training From the Shell </h3>
+
+
+1. **Create an Environment:** Create a new virtual environment using `conda`.
+   ```bash
+   conda create --name CIS_UNet python=3.10
+   ```
+2. **Activate the Enviornment:** Activate the newly created environment.
+   ```bash
+   conda activate CIS_UNet
+   ```
+3. **Install Required Packages:** Install the necessary packages listed in the **[requirements.txt](https://github.com/ImranNust/CIS-UNet-Context-Infused-Swin-UNet-for-Aortic-Segmentation/blob/main/requirements.txt)** file.
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. **Prepare the Dataset:** Prepare the dataset for the training of deep-learning based image registration network.
+   - Navigate to the directory where the script is saved:
+     ```bash
+     cd ScriptedCodes
+     ```
+     
+    - Now runt the following commands to prepare the dataset for image registration task:
+    
+      ```bash
+      chmod +x ./run_data_preparation.sh
+      ./run_data_preparation.sh   
+      ```
+      
+   This will create two folders, `png_data` and `processed_png_data`, inside the `data` directory. The images inside `processed_png_data` will be used to train the networks; you may delete the `png_images` directory if desired.
+
+6. **Train the Image Registration Network:**
+   - Confirm that your current working directory is `ScriptedCodes`.
+   - To initiate the training process for both the affine and deformable registration networks across six folds, execute the following commands:
+        ```bash
+        chmod +x ./run_training.sh
+        ./run_training.sh
+        ```
+   - The script will automatically create a `saved_model` folder within the `ScriptedCodes` directory.
+   - The training process will proceed, and the model achieving the lowest loss will be stored in the `saved_model` directory.
+   
+7. **Prediction and Evaluation:**
+   - Verify that you are located within the `ScriptedCodes` directory.
+   - Execute the following commands to commence the prediction and evaluation process:
+
+     ```bash
+     chmod +x ./run_prediction_and_evaluation.sh
+     ./run_prediction_and_evaluation.sh
+     ```
+   - Upon successful execution, the results directory will be populated with the deformed registered images.
+   - Concurrently, a comprehensive CSV file detailing the evaluation metrics will be generated. This file includes the **Dice coefficient**, **Hausdorff distance**, **Urethra distance**, and distances for **Landmark 1**, **Landmark 2**, and **Landmark 3**, along with the **average landmark distance**.
+
+---
