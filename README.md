@@ -18,3 +18,17 @@ Welcome to the repository containing the code and dataset for **CIS-UNet**, a de
 [![](https://img.shields.io/badge/Shao-gray?logo=linkedin&logoColor=white&label=Wei&labelColor=darkviolet&color=teal)](https://www.linkedin.com/in/wei-shao-438782115/)
 
 </div>
+
+---
+
+## Repository Contents
+
+<img align="right" width="400" height="350" src="assets/LabelAnnotationDemo_v3.gif" alt="Demo of Aortic Branches">
+
+1. [Overview](#overview)
+2. [Directory Structure](#directory-structure)
+3. [Dataset Detail](#dataset-detail)
+4. [Scripted Code](#scripted)
+5. [Interactive Code](#interactive)
+6. [Dependencies](#dependencies)
+7. [Citations](#citations)
