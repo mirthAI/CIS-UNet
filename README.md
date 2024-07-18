@@ -78,9 +78,14 @@ CIS-UNet/
 |           |
 |           └── ...                              # (similar structure for other data samples)  
 │
-├── InteractiveCodes/                            # Jupyter notebook containing the script for executing the training of the model.
-│      ├── Training.ipynb                        # Jupyter notebook containing the code to generate segmentation files using the trained models and to produce the metrics (DCS and MSD)
+├── InteractiveCodes/                            # Folder containing the Jupyternotebooks
+│      ├── Training.ipynb                        # Jupyter notebook containing the script for executing the training of the model.
 |      ├── Prediction_and_Evaluation.ipynb       # Jupyter notebook containing the code to generate segmentation files using the trained models and to produce the metrics (DCS and MSD)
+|      ├── utils/                                # Folder containing utility functions used during training
+|      |     ├── init.py                         # Empty file to mark utils as a Python package
+|      |     ├── CIS_UNet.py                     # CIS_UNet model definition
+|      |     ├── dataset_processor.py            # Python script containing functions for loading and processing data
+|      |     └── training_validation.py          # Python script containing functions for training the model
 |      ├── results                               # The directory where the segmenation files and the computed metrics will be saved.
 |      └── saved_models                          # The directory where your best trained models for each fold will be saved.
 │
