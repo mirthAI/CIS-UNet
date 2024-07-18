@@ -105,3 +105,26 @@ CIS-UNet/
 ```
 
 
+## Dataset Detail <a id="dataset-detail"></a>
+
+<div align=justify>
+
+<img align="right" width="600" height="500" src="assets/LabelAnnotation.png" alt="Aorta and Its Branches">
+  
+**Our dataset consists of 59 CTA images**, each with an axial size of **512×512 pixels** and an isotropic in-plane resolution ranging from **0.759 mm to 1.007 mm**, with an average of **0.875 mm**. The number of axial slices varies between **347 and 962**, with a mean of **734 slices**. The axial slice thickness ranges from **0.8 mm to 2 mm**, averaging **0.969 mm**. 
+
+In addition to the imaging data, our dataset includes 59 3D scorresponding egmentation volumes, containing the **annotations for thirteen vascular branches**. These branches include the Aorta, Innominate Artery (IA), Right Subclavian Artery, Right Common Carotid Artery, Left Common Carotid Artery (LCC), Left Subclavian Artery (LSA), Celiac Artery (CA), Superior Mesenteric Artery (SMA), Left Renal Artery (LRA), Right Renal Artery (RRA), Left Common Iliac Artery (LCIA), Left External Iliac Artery (LEIA), Left Internal Iliac Artery (LIIA), Right Common Iliac Artery (RCIA), Right External Iliac Artery (REIA), and Right Internal Iliac Artery (RIIA).
+
+
+To expedite model training, we resampled the volumes to a uniform spacing of **1.5 mm×1.5 mm×1.5 mm**. We used the **"[RandCropByPosNegLabeld](https://docs.monai.io/en/stable/transforms.html)" function from the [MONAI](https://monai.io/) library** to facilitate random cropping of a fixed-size region from a large 3D image. The cropping center can be either a foreground or background voxel, determined by a specified foreground-to-background ratio. By leveraging this function, we selected random **128×128×28 patches** from the resampled volumes for training, enhancing data diversity and mitigating overfitting.
+
+
+<h3>Accessing the Dataset</h3>
+
+To access the dataset, please participate in the **[AortaSeg24 Challenge](https://aortaseg24.grand-challenge.org/)** hosted on the Grand Challenge platform. Begin by visiting the challenge page and proceed to complete the **[Data Agreement Form](https://aortaseg24.grand-challenge.org/dataset-access-information/)**. Upon submission and approval, you will gain full access to the dataset. Please download the dataset and place it in the data directory. Ensure your final data directory matches the structure defined above. 
+
+**Currently, the dataset is only accessible to participants. Once the challenge is over, it will be made accessible to the general audience.**
+
+
+</div>
+
