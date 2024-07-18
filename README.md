@@ -32,6 +32,8 @@ Welcome to the repository containing the code and dataset for **CIS-UNet**, a de
     1. [Training From The Shell](#shell_training)
     2. [Prediction and Evaluation From the Shell](#shell_prediction)
 6. [Interactive Code](#interactive)
+    1. [Training Using Jupyter Notebook](#jupyter_training)
+    2. [Prediction and Evaluation Using Jupyter Notebook](#jupyter_prediction)
 7. [Dependencies](#dependencies)
 8. [Citations](#citations)
 
