@@ -32,3 +32,71 @@ Welcome to the repository containing the code and dataset for **CIS-UNet**, a de
 5. [Interactive Code](#interactive)
 6. [Dependencies](#dependencies)
 7. [Citations](#citations)
+
+
+## Overview <a id="overview"></a>
+
+<div align=justify>
+Aortic segmentation is crucial for minimally invasive treatments of aortic diseases.  Inaccurate segmentation can lead to errors in surgical planning and endograft construction. Previous methods treated aortic segmentation as a binary image segmentation problem, neglecting the need to distinguish individual aortic branches.
+
+CIS-UNet addresses this limitation by performing multi-class segmentation of the aorta and thirteen aortic branches. It combines the strengths of convolutional neural networks (CNNs) and Swin transformers, resulting in a hierarchical encoder-decoder architecture with skip connections. Notably, CIS-UNet introduces a novel Context-aware Shifted Window Self-Attention (CSW-SA) block that enhances feature representation by capturing long-range dependencies between pixels.
+</div>
+<div align=center>
+<img src="assets/CIS_UNet_Architecture.png" alt="CIS UNet Architecture">
+</div>
+
+## Directory Structure <a id="directory-structure"></a>
+
+<h3> 1. Clone the Repository:</h3>
+
+  Open your terminal or command prompt and clone the project directory as follows:
+  ```
+  git clone https://github.com/mirthAI/CIS-UNet.git
+  ```
+
+<h3> 2. Navigate to the Directory: </h3>
+
+  Once the repository is cloned, navigate to the desired directory using the `cd` command as follows:
+  ```
+  cd CIS-UNet
+  ```
+<h3> 3. Directory Structure of CIS-UNet </h3>
+
+
+```
+CIS-UNet/
+├── data/                                        # Folder containing the data
+|     ├── Volumes/
+|     │     ├── Subject001_CTA.nii.gz            # Input CTA image
+|     │     ├── Subject002_CTA.nii.gz            # Input CTA image
+|     │     │     
+|     │     └── ...                              #(similar structure for other data samples)
+|     |
+|     └── Labels/
+|           ├── Subject001_CTA_Label.nii.gz      # Input Segmentation
+|           ├── Subject002_CTA_Label.nii.gz      # Input Segmentation
+|           |
+|           └── ...                              # (similar structure for other data samples)  
+│
+├── InteractiveCodes/                            # Jupyter notebook containing the script for executing the training of the model.
+│      ├── Training.ipynb                        # Jupyter notebook containing the code to generate segmentation files using the trained models and to produce the metrics (DCS and MSD)
+|      ├── Prediction_and_Evaluation.ipynb       # Jupyter notebook containing the code to generate segmentation files using the trained models and to produce the metrics (DCS and MSD)
+|      ├── results                               # The directory where the segmenation files and the computed metrics will be saved.
+|      └── saved_models                          # The directory where your best trained models for each fold will be saved.
+│
+└── ScriptedCodes/                               # Folder for scripted Jupyter notebooks
+       ├── run_training.sh                       # Bash script to execute training process
+       ├── segmentation_pipeline.py              # Python script containing the core training logic
+       ├── predict_and_evaluate.py               # Python script to generate segmentation files using the trained models and to produce the metrics (DCS and MSD)
+       ├── run_prediction_and_evaluation.sh      # Bash script to execute prediction and evaluation processes
+       ├── utils/                                # Folder containing utility functions used during training
+       |     ├── init.py                         # Empty file to mark utils as a Python package
+       |     ├── CIS_UNet.py                     # CIS_UNet model definition
+       |     ├── dataset_processor.py            # Python script containing functions for loading and processing data
+       |     └── training_validation.py          # Python script containing functions for training the model
+       ├── results                               # The directory where the segmenation files and the computed metrics will be saved.
+       └── saved_models                          # The directory where your best trained models for each fold will be saved.                                                 
+
+```
+
+
