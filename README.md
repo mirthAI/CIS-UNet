@@ -157,22 +157,7 @@ For those who prefer running scripts from the shell, follow these steps to train
    ```bash
    pip install -r requirements.txt
    ```
-4. **Prepare the Dataset:** Prepare the dataset for the training of deep-learning based image registration network.
-   - Navigate to the directory where the script is saved:
-     ```bash
-     cd ScriptedCodes
-     ```
-     
-    - Now runt the following commands to prepare the dataset for image registration task:
-    
-      ```bash
-      chmod +x ./run_data_preparation.sh
-      ./run_data_preparation.sh   
-      ```
-      
-   This will create two folders, `png_data` and `processed_png_data`, inside the `data` directory. The images inside `processed_png_data` will be used to train the networks; you may delete the `png_images` directory if desired.
-
-6. **Train the CIS_UNet Network:** <a id="shell_training"></a>
+4. **Train the CIS_UNet Network:** <a id="shell_training"></a>
    - Confirm that your current working directory is `ScriptedCodes`. If not, navigate to the directory where the script is saved:
      ```bash
      cd ScriptedCodes
@@ -185,7 +170,7 @@ For those who prefer running scripts from the shell, follow these steps to train
    - The script will automatically create a `saved_model` folder within the `ScriptedCodes` directory.
    - The training process will proceed, and the model achieving the lowest loss will be stored in the `saved_model` directory.
    
-7. **Prediction and Evaluation:**<a id="shell_prediction"></a> After training, use the saved checkpoints to generate predictions on the test set and evaluate the model. 
+5. **Prediction and Evaluation:** <a id="shell_prediction"></a> After training, use the saved checkpoints to generate predictions on the test set and evaluate the model. 
    - Verify that you are located within the `ScriptedCodes` directory.
    - Execute the following commands to commence the prediction and evaluation process:
 
