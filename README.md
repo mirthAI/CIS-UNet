@@ -136,7 +136,7 @@ To access the dataset, please participate in the **[AortaSeg24 Challenge](https:
 
 
 <div align=center> <h1> 
-  <a id="scripted_code"></a>
+  <a id="scripted"></a>
   Scipted Code
 </h1></div>
 
@@ -199,34 +199,32 @@ For those who prefer running scripts from the shell, follow these steps to train
 ---
 
 <div align="center">
-  <a id="interactive_code"></a>
+  <a id="interactive"></a>
   <h1>Interactive Code</h1>
 </div>
 
-For those who prefer Jupyter notebooks, navigate to the `InteractiveCodes` directory, where you will find three notebooks:
+For those who prefer Jupyter notebooks, navigate to the `InteractiveCodes` directory, where you will find two notebooks:
 
-1. **1_Preparing_the_Data.ipynb**
-2. **2_Train_Registration_Networks.ipynb**
-3. **3_Performance_Evaluation.ipynb**
+1. **1_Training.ipynb**
+2. **2_Prediction_and_Evaluation.ipynb**
+
 
 ### Steps:
 
-1. **Prepare the Dataset:** 
-   - Open `1_Preparing_the_Data.ipynb` and run it. This self-explanatory notebook will guide you through all the steps to prepare the dataset. 
-   - This process will create two folders, `png_data` and `processed_png_data`, inside the `data` directory. The images inside `processed_png_data` will be used to train the networks; you may delete the `png_images` directory if desired.
+1. **Training CIS UNet Using Jupyter Notebook:** <a id="jupyter_training"></a>
+   - Open `1_Training.ipynb` and run it. This self-explanatory notebook will guide you through all the steps to train the network.
+   - It will run the training for all the folds and save the best trained models in the `saved_models` directory.
 
-2. **Train Image Registration Network:** 
-   - Open `2_Train_Registration_Networks.ipynb` and run it. This notebook will walk you through the process of training both affine and deformable registration networks.
 
-3. **Prediction and Evaluation:** 
-   - Open `3_Performance_Evaluation.ipynb` and run it. This notebook will guide you through the steps for prediction and generating evaluation metrics.
-   - This process will generate the deformed registered images in the `results` directory. Additionally, a CSV file will be generated containing the Dice coefficient, Hausdorff distance, Urethra distance, distances for Landmark 1, 2, and 3, as well as the average landmark distance.
+2. **Prediction and Evaluation:**  <a id="jupyter_prediction"></a>
+   - Open `2_Prediction_and_Evaluation.ipynb` and run it. This notebook will guide you through the steps for prediction and generating evaluation metrics.
+   - This process will generate 3D segmentation files in the `results` directory. Additionally, a CSV file will be generated containing the **Dice coefficient** and **Hausdorff distance**.
 
 Feel free to experiment and improve upon our results.
 
 ---
 
-## Dependencies <a id="prediction-from-shell"></a>
+## Dependencies <a id="dependencies"></a>
 
 The following dependencies are required for the project:
 
