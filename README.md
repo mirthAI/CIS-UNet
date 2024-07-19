@@ -94,7 +94,7 @@ CIS-UNet/
 |      ├── results                               # The directory where the segmenation files and the computed metrics will be saved.
 |      └── saved_models                          # The directory where your best trained models for each fold will be saved.
 │
-└── ScriptedCodes/                               # Folder for scripted Jupyter notebooks
+└── ScriptedCodes/                               # Folder for scripted code
        ├── run_training.sh                       # Bash script to execute training process
        ├── segmentation_pipeline.py              # Python script containing the core training logic
        ├── predict_and_evaluate.py               # Python script to generate segmentation files using the trained models and to produce the metrics (DCS and MSD)
