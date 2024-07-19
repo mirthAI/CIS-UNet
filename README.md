@@ -153,7 +153,7 @@ For those who prefer running scripts from the shell, follow these steps to train
    ```bash
    conda activate CIS_UNet
    ```
-3. **Install Required Packages:** Install the necessary packages listed in the **[requirements.txt](https://github.com/ImranNust/CIS-UNet-Context-Infused-Swin-UNet-for-Aortic-Segmentation/blob/main/requirements.txt)** file.
+3. **Install Required Packages:** Install the necessary packages listed in the **[requirements.txt](https://github.com/mirthAI/CIS-UNet/blob/main/requirements.txt)** file.
    ```bash
    pip install -r requirements.txt
    ```
