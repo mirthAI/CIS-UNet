@@ -126,9 +126,8 @@ To expedite model training, we resampled the volumes to a uniform spacing of **1
 
 <h3>Accessing the Dataset</h3>
 
-To access the dataset, please participate in the **[AortaSeg24 Challenge](https://aortaseg24.grand-challenge.org/)** hosted on the Grand Challenge platform. Begin by visiting the challenge page and proceed to complete the **[Data Agreement Form](https://aortaseg24.grand-challenge.org/dataset-access-information/)**. Upon submission and approval, you will gain full access to the dataset. Please download the dataset and place it in the data directory. Ensure your final data directory matches the structure defined above. 
+A dataset containing 59 3D CTA volumes along with segmentation files is available. To access the dataset, please click [here](https://na3.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=44c40604-8324-4afe-ba5a-083d27d46550&env=na3&acct=38f380cc-7bc9-468e-9c99-fc5ba7151d54&v=2) and complete the data agreement form.
 
-**Currently, the dataset is only accessible to participants. Once the challenge is over, it will be made accessible to the general audience.**
 
 </div>
 
