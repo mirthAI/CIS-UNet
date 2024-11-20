@@ -239,8 +239,9 @@ The following dependencies are required for the project:
 1. @article{imran2024cis,
   title={CIS-UNet: Multi-Class Segmentation of the Aorta in Computed Tomography Angiography via Context-Aware Shifted Window Self-Attention},
   author={Imran, Muhammad and Krebs, Jonathan R and Gopu, Veera Rajasekhar Reddy and Fazzone, Brian and Sivaraman, Vishal Balaji and Kumar, Amarjeet and Viscardi, Chelsea and Heithaus, Robert Evans and Shickel, Benjamin and Zhou, Yuyin and Shao, Wei},
-  journal={arXiv preprint arXiv:2401.13049},
-  year={2024}
+  journal={Computerized Medical Imaging and Graphics},
+  year={2024},
+  publisher={Elsevier}
 }
 
 2. @article{krebs2024volumetric,
