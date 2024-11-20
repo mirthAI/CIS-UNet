@@ -4,11 +4,11 @@
 
 Welcome to the repository containing the code and dataset for **CIS-UNet**, a deep learning model designed for accurate 3D segmentation of the aorta and its branches.
   
-[![](https://img.shields.io/badge/Imran-gray?logo=github&logoColor=white&label=Muhammad&labelColor=darkgreen&color=red)](https://www.linkedin.com/in/imrannust/) &emsp;
+[![](https://img.shields.io/badge/Imran-gray?logo=github&logoColor=white&label=Muhammad&labelColor=darkgreen&color=red)](https://github.com/ImranNust) &emsp;
 [![](https://img.shields.io/badge/Jonathan-gray?logo=world%20health%20organization&logoColor=white&label=Krebs&labelColor=darkblue&color=limegreen)](https://surgery.med.ufl.edu/profile/krebs-jonathan/) &emsp;
 [![](https://img.shields.io/badge/Gopu-gray?logo=linkedin&logoColor=white&label=Veera&labelColor=black&color=yellow)](https://www.linkedin.com/in/veera-rajasekhar-reddy-gopu-3107361a6/?originalSubdomain=in) &emsp;
 [![](https://img.shields.io/badge/Fazzone-gray?logo=world%20health%20organization&logoColor=white&label=Brian&labelColor=darkred&color=cyan)](https://surgery.med.ufl.edu/profile/fazzone-brian/) &emsp;
-[![](https://img.shields.io/badge/Balaji%20Sivaraman-gray?logo=linkedin&logoColor=white&label=Vishal&labelColor=darkgreen&color=orange)](https://github.com/VishalBalajiSivaraman) &emsp;
+[![](https://img.shields.io/badge/Balaji%20Sivaraman-gray?logo=github&logoColor=white&label=Vishal&labelColor=darkgreen&color=orange)](https://github.com/VishalBalajiSivaraman) &emsp;
 [![](https://img.shields.io/badge/Kumar-gray?logo=linkedin&logoColor=white&label=Amarjeet&labelColor=darkpurple&color=lime)](https://www.linkedin.com/in/amar-ufl/) &emsp;
 [![](https://img.shields.io/badge/Viscardi-gray?logo=world%20health%20organization&logoColor=white&label=Chelsea&labelColor=darkslategray&color=fuchsia)](https://surgery.med.ufl.edu/profile/viscardi-chelsea/) &emsp;
 [![](https://img.shields.io/badge/Heithaus-gray?logo=world%20health%20organization&logoColor=white&label=Robert&labelColor=darkolivegreen&color=purple)](https://www.orlandohealth.com/physician-finder/robert-e-heithaus-md#/overview) &emsp;
