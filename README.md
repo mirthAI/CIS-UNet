@@ -258,3 +258,10 @@ The following dependencies are required for the project:
     doi = {https://doi.org/10.1016/j.jvs.2024.06.001},
     url = {https://www.sciencedirect.com/science/article/pii/S074152142401245X}}
 
+3. @article{IMRAN2025AORTASEG24,
+    title={Multi-Class Segmentation of Aortic Branches and Zones in Computed Tomography Angiography: The AortaSeg24 Challenge},
+    author={Muhammad Imran and  Jonathan R Krebs and Vishal Balaji Sivaraman and Teng Zhang and ... and Jun Ma and Yuyin Zhou and Michol A. Cooper and Wei Shao},
+    journal={arXiv preprint arXiv:2502.05330},
+    year={2025},
+    url = {https://arxiv.org/abs/2502.05330}}
+
