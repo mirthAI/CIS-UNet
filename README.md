@@ -126,7 +126,7 @@ To expedite model training, we resampled the volumes to a uniform spacing of **1
 
 <h3>Accessing the Dataset</h3>
 
-A dataset containing 59 3D CTA volumes along with segmentation files is available. To access the dataset, please click [here](https://na3.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=44c40604-8324-4afe-ba5a-083d27d46550&env=na3&acct=38f380cc-7bc9-468e-9c99-fc5ba7151d54&v=2) and complete the data agreement form.
+A dataset containing 59 3D CTA volumes along with segmentation files is available. To access the dataset, please click [here](https://na3.docusign.net/Signing/?insession=1&ti=7527be298e4e4f77b2baa25c25d6c267) and complete the data agreement form.
 
 
 </div>
